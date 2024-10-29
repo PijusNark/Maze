@@ -6,10 +6,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal"); // Left/Right movement
-        float vertical = Input.GetAxis("Vertical"); // Forward/Backward movement
-        float upward = Input.GetAxis("Jump"); // Upward movement (usually mapped to Space bar)
-        float downward = Input.GetKey(KeyCode.LeftControl) ? -1 : 0; // Downward movement (hold Left Control to go down)
+        float horizontal = Input.GetAxis("Horizontal"); // Left/Right 
+        float vertical = Input.GetAxis("Vertical"); // Forward
+        float upward = Input.GetAxis("Jump"); // Up
+        float downward = Input.GetKey(KeyCode.LeftControl) ? -1 : 0; // Downward (cntrl)
 
         
         Vector3 direction = new Vector3(horizontal, upward + downward, vertical).normalized;
